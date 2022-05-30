@@ -1,0 +1,241 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+img {
+  height: 50px;
+}
+
+header{
+  background:rgba(0, 0, 0, .6) url(./img0.jpg);
+  background-blend-mode: darken;
+  height: 450px;
+  color: white;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 30px;
+}
+header h1{
+  padding-top: 100px;
+  margin-bottom: 30px;
+  overflow-y: hidden;
+}
+header input{
+  color: white;
+  font-size: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, .4);
+  background-color: rgb(50, 50, 50);
+  margin-top: 20px;
+  padding: 20px;
+  width:  150px;
+  cursor: pointer;
+}
+header input:hover {
+  background: white;
+  color: black;
+}
+
+.webApplication{
+  display: grid;
+  padding: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background: #f4f4f4;
+  column-gap: 30px;
+  grid-template-areas: 
+  'titulo titulo'
+  'primeiraParte segundaParte';
+}
+.webApplication h2{
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+  grid-area: titulo;
+}
+.webApplication p:last-child{
+  grid-area: segundaParte;
+}
+.webApplication p{
+  grid-area: primeiraParte;
+  font-size: 1.2rem;
+}
+
+.imgs{
+  display: flex;
+  gap: 30px;
+  background: rgb(50, 50, 50);
+  height: 480px;
+  padding: 45px;
+  padding-left: 200px;
+  padding-right: 200px;
+  overflow-y: hidden;
+}
+.imgs-1{
+  display: grid;
+  grid-template-areas:
+  "imagem1"
+  "titulo1"
+  "texto1";
+  background: white;
+  width: 500px;
+  height: 490px;
+}
+.imgs-1 img{
+grid-area: imagem1;
+height: 180px;
+}
+.imgs-1 h3{
+  grid-area: titulo1;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.imgs-1 p{
+  grid-area: texto1;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: -20px;
+  line-height: 30px;
+  padding: 20px;
+}
+
+.imgs-2{
+  display: grid;
+  grid-template-areas:
+  "imagem2"
+  "titulo2"
+  "texto2";
+  background: white;
+  width: 500px;
+  height: 490px;
+}
+.imgs-2 img{
+grid-area: imagem2;
+height: 180px;
+}
+.imgs-2 h3{
+  grid-area: titulo2;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.imgs-2 p{
+  grid-area: texto2;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: -20px;
+  line-height: 30px;
+  padding: 20px;
+}
+
+.imgs-3{
+  display: grid;
+  grid-template-areas:
+  "imagem3"
+  "titulo3"
+  "texto3";
+  background: white;
+  width: 500px;
+  height: 490px;
+}
+.imgs-3 img{
+grid-area: imagem3;
+height: 180px;
+}
+.imgs-3 h3{
+  grid-area: titulo3;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.imgs-3 p{
+  grid-area: texto3;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: -20px;
+  line-height: 30px;
+  padding: 20px;
+}
+
+.weHandle{
+  padding: 60px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.weHandle p{
+margin-top: 50px;
+line-height: 30px;
+}
+
+.contact{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.2rem;
+}
+.contactUs {
+  grid-column: 1/2;
+  background: rgb(38,144,212);
+  color: white;
+  text-align: center;
+  padding: 60px 50px 50px 50px;
+}
+.contactUs p{
+  margin-top: 40px;
+}
+.aboutOur {
+  grid-column: 2/2;
+  background: rgb(51, 51, 51);
+  color: white;
+  text-align: center;
+  padding: 60px 50px 50px 50px;
+}
+.aboutOur p{
+  margin-top: 40px;
+}
+
+footer{
+  display: flex;
+  background: black;
+  color: white;
+  justify-content: space-around;
+  font-size: 1.2rem;
+  padding: 35px;
+}
+footer span{
+  color: lightblue;
+}
+
+/** Responsive **/ 
+
+@media (max-width: 700px){
+  *{
+    overflow-x: hidden;
+  }
+  header h1{
+    flex-wrap: wrap;
+  }
+
+  .webApplication{
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: block;
+  }
+
+  .imgs{
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 1520px;
+  }
+  .imgs-1 img, .imgs-2 img, .imgs-3 img{
+    width: 100%;
+  }
+  .contact {
+    display: block;
+  }
+  footer{
+    text-align: center;
+    display: block;
+  }
+}
+
